@@ -1,0 +1,253 @@
+/* ==================== 1. إعادة الضبط والخطوط الأساسية ==================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* استخدام الخط الذي تم ربطه في HTML */
+    font-family: 'Changa', sans-serif; 
+    line-height: 1.6;
+    background-color: #f8f9fa; /* خلفية فاتحة ومريحة للعين */
+    color: #343a40; /* لون نص داكن كلاسيكي */
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* لتحديد عرض الصفحة الأقصى على الشاشات الكبيرة */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #0056b3; /* لون أزرق ثقافي للروابط */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #003d80;
+}
+
+/* ==================== 2. ترويسة الموقع (Header) ==================== */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.magazine-title {
+    font-size: 2.2em;
+    color: #495057;
+    margin-bottom: 0;
+}
+
+.tagline {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* ==================== 3. قائمة التنقل (Navigation) ==================== */
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-list li a {
+    color: #495057;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.nav-list li a:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: #495057;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* ==================== 4. قسم المقال المميز (Featured Article) ==================== */
+.featured-grid {
+    display: grid;
+    /* تخطيط شبكي: صورة على اليمين والمحتوى على اليسار */
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 992px) {
+    .featured-grid {
+        /* على الشاشات الكبيرة: تقسيم 60% للمحتوى و 40% للصورة */
+        grid-template-columns: 3fr 2fr; 
+        text-align: right;
+    }
+}
+
+.highlight-card {
+    display: contents; /* لجعل العناصر تتوزع على الشبكة مباشرة */
+}
+
+.featured-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    /* ترتيب الصورة لتظهر في العمود الأيمن على الشاشات الكبيرة */
+    grid-column: 2 / 3; 
+}
+
+.content-box {
+    grid-column: 1 / 2; /* وضع المحتوى في العمود الأيسر */
+    padding: 10px;
+}
+
+.content-box h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.excerpt {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #ffc107; /* لون أصفر جذاب */
+    color: #343a40;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* ==================== 5. قائمة المقالات (Latest Articles Grid) ==================== */
+.section-title {
+    font-size: 2em;
+    color: #495057;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.articles-grid {
+    display: grid;
+    /* تخطيط شبكي: 1 عمود على الهاتف، 3 أعمدة على الشاشات الكبيرة */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    padding: 15px;
+    font-size: 1.4em;
+    color: #343a40;
+}
+
+.article-card .meta {
+    padding: 0 15px 15px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* ==================== 6. تذييل الموقع (Footer) ==================== */
+.site-footer {
+    background-color: #212529; /* لون داكن احترافي */
+    color: #f8f9fa;
+    padding: 40px 0 10px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-about, .social-links {
+    flex-basis: 45%; /* لضمان التوزيع على سطرين في الهاتف */
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        justify-content: space-around;
+        gap: 0;
+    }
+    .footer-about, .social-links {
+        flex-basis: auto;
+    }
+}
+
+.footer-about p {
+    font-size: 0.9em;
+    max-width: 400px;
+}
+
+.social-links a {
+    color: #f8f9fa;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #343a40;
+    padding-top: 10px;
+    font-size: 0.8em;
+}
