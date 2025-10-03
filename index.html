@@ -1,64 +1,99 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>موقعي الثقافي</title>
-  <style>
-    body { font-family: Tahoma, sans-serif; direction: rtl; background: #f5f5f5; margin: 0; padding: 0; }
-    header { background: #222; color: #fff; padding: 20px; text-align: center; }
-    h1 { margin: 0; font-size: 26px; }
-    .container { width: 90%; max-width: 900px; margin: 20px auto; }
-    .post { background: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,.1); margin-bottom: 20px; padding: 15px; }
-    .post img { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
-    .post h2 { margin: 0 0 10px; color: #333; }
-    .post p { color: #555; line-height: 1.7; }
-    footer { text-align: center; padding: 15px; background: #222; color: #fff; margin-top: 40px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>مجلة الملتقى الثقافي للكتاب | نقد، فكر، وأدب معاصر</title>
+    <meta name="description" content="منبر فكري وأدبي رائد يقدم تحليلات عميقة ونقداً جريئاً للقضايا الثقافية والفلسفية المعاصرة. اكتشف أحدث المقالات والمراجعات.">
+    <meta name="keywords" content="مجلة ثقافية, نقد أدبي, فلسفة معاصرة, أدب عربي, مجول شعلان الحيالي, الملتقى الثقافي">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;700&display=swap">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/images/favicon-final.png">
+    
 </head>
 <body>
-  <header>
-    <h1>الموقع الثقافي</h1>
-    <p>منشورات وصور ثقافية</p>
-  </header>
 
-  <div class="container" id="posts"></div>
+    <header class="main-header">
+        <div class="container header-grid">
+            <a href="index.html" class="logo-link">
+                <h1 class="magazine-title">الملتقى الثقافي</h1>
+                <p class="tagline">مجلة الفكر والنقد المعاصر</p>
+            </a>
+            
+            <nav id="main-nav" role="navigation" aria-label="القائمة الرئيسية">
+                <ul class="nav-list">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المجلة</a></li>
+                    <li><a href="#categories">الأقسام</a></li>
+                    <li><a href="#latest">المقالات</a></li>
+                    <li><a href="contact.html">تواصل</a></li>
+                </ul>
+                <button class="search-btn" aria-label="زر البحث"><i class="fas fa-search"></i></button>
+            </nav>
+        </div>
+    </header>
 
-  <footer>
-    <p>© 2025 موقعي الثقافي</p>
-  </footer>
+    <main class="container main-content">
+        
+        <section id="featured-article" class="featured-grid">
+            <article class="highlight-card">
+                <img src="/images/featured-book-cover.jpg" alt="غلاف الكتاب المميز" class="featured-img" loading="lazy">
+                <div class="content-box">
+                    <span class="category-tag">فلسفة ونقد</span>
+                    <h2>عنوان المقال المميز: تحليل كتاب وهم المجتمع الفاضل</h2>
+                    <p class="excerpt">تحليل جريء لأبرز مؤلفات مجول شعلان الحيالي، يكشف عن الأوهام التي ينسجها الفكر الجمعي حول الكمال الاجتماعي وكيف يمكن للفرد التحرر منها. بقلم: هيثم الكاظمي.</p>
+                    <a href="article1.html" class="read-more">اقرأ المقال <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+        </section>
 
-  <script>
-    // هنا تضيف منشوراتك
-    const posts = [
-      {
-        title: "أول منشور",
-        image: "https://picsum.photos/800/400?random=1",
-        text: "الثقافة جسر يربط الماضي بالحاضر، ويفتح الطريق نحو المستقبل."
-      },
-      {
-        title: "اقتباس ثقافي",
-        image: "https://picsum.photos/800/400?random=2",
-        text: "الكتب ليست للزينة، إنها مفاتيح لعالم آخر."
-      },
-      {
-        title: "مقالة قصيرة",
-        image: "https://picsum.photos/800/400?random=3",
-        text: "حين نقرأ نصبح أكثر إنسانية، وأكثر وعياً بذواتنا وبالآخرين."
-      }
-    ];
+        <section id="latest-articles" class="articles-grid">
+            <h2 class="section-title">أحدث المقالات</h2>
+            
+            <article class="article-card">
+                <img src="/images/article-img-1.jpg" alt="صورة المقال" class="article-img" loading="lazy">
+                <span class="category-tag">أدب معاصر</span>
+                <h3>شعرية المكان: قراءة في قصائد العبثية</h3>
+                <p class="meta">نشر في: 25 سبتمبر 2025</p>
+            </article>
+            
+            <article class="article-card">
+                <img src="/images/article-img-2.jpg" alt="صورة المقال" class="article-img" loading="lazy">
+                <span class="category-tag">تحليل اجتماعي</span>
+                <h3>ظاهرة التضليل الإعلامي: أدوات العصر الجديد</h3>
+                <p class="meta">نشر في: 20 سبتمبر 2025</p>
+            </article>
 
-    const postsContainer = document.getElementById("posts");
+            </section>
 
-    posts.forEach(post => {
-      const div = document.createElement("div");
-      div.className = "post";
-      div.innerHTML = `
-        <img src="${post.image}" alt="${post.title}">
-        <h2>${post.title}</h2>
-        <p>${post.text}</p>
-      `;
-      postsContainer.appendChild(div);
-    });
-  </script>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4>مجلة الملتقى الثقافي</h4>
+                <p>رسالتنا هي إيقاظ الوعي ونشر النقد العميق. انضم إلينا في رحلة الفكر.</p>
+            </div>
+            
+            <div class="social-links">
+                <h4>تابعنا</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 الملتقى الثقافي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script> 
 </body>
 </html>
