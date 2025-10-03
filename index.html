@@ -6,11 +6,17 @@
     
     <title>مجلة الملتقى الثقافي للكتاب | نقد، فكر، وأدب معاصر</title>
     <meta name="description" content="منبر فكري وأدبي رائد يقدم تحليلات عميقة ونقداً جريئاً للقضايا الثقافية والفلسفية المعاصرة. اكتشف أحدث المقالات والمراجعات.">
-    <meta name="keywords" content="مجلة ثقافية, نقد أدبي, فلسفة معاصرة, أدب عربي, مجول شعلان الحيالي, الملتقى الثقافي">
+    <meta name="keywords" content="مجلة ثقافية, نقد أدبي, فلسفة معاصرة, مجول شعلان الحيالي, الملتقى الثقافي">
+    <meta name="author" content="مجول شعلان الحيالي">
+    
+    <meta property="og:title" content="مجلة الملتقى الثقافي للكتاب" />
+    <meta property="og:description" content="منبر فكري وأدبي رائد للنقد والفكر المعاصر." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="[ضع رابط موقعك هنا]" />
+    <meta property="og:image" content="/images/logo-share.png" /> 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;700&display=swap">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Changa:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
     
@@ -27,6 +33,10 @@
                 <p class="tagline">مجلة الفكر والنقد المعاصر</p>
             </a>
             
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="فتح القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <nav id="main-nav" role="navigation" aria-label="القائمة الرئيسية">
                 <ul class="nav-list">
                     <li><a href="index.html">الرئيسية</a></li>
@@ -42,51 +52,91 @@
 
     <main class="container main-content">
         
-        <section id="featured-article" class="featured-grid">
+        <section id="featured-article" class="featured-grid card-style">
             <article class="highlight-card">
                 <img src="/images/featured-book-cover.jpg" alt="غلاف الكتاب المميز" class="featured-img" loading="lazy">
+                
                 <div class="content-box">
                     <span class="category-tag">فلسفة ونقد</span>
-                    <h2>عنوان المقال المميز: تحليل كتاب وهم المجتمع الفاضل</h2>
-                    <p class="excerpt">تحليل جريء لأبرز مؤلفات مجول شعلان الحيالي، يكشف عن الأوهام التي ينسجها الفكر الجمعي حول الكمال الاجتماعي وكيف يمكن للفرد التحرر منها. بقلم: هيثم الكاظمي.</p>
-                    <a href="article1.html" class="read-more">اقرأ المقال <i class="fas fa-arrow-left"></i></a>
+                    <h2 class="article-title-featured">تحليل كتاب وهم المجتمع الفاضل: صوت مجول شعلان الحيالي</h2>
+                    <p class="excerpt">تحليل جريء لأبرز مؤلفات مجول شعلان الحيالي، يكشف عن الأوهام التي ينسجها الفكر الجمعي حول الكمال الاجتماعي وكيف يمكن للفرد التحرر منها.</p>
+                    <div class="meta-footer">
+                         <span class="author-meta">بقلم: هيثم الكاظمي</span>
+                         <a href="welcome-message.html" class="btn-primary">اقرأ المقال بالكامل <i class="fas fa-arrow-left"></i></a>
+                    </div>
                 </div>
             </article>
         </section>
 
-        <section id="latest-articles" class="articles-grid">
-            <h2 class="section-title">أحدث المقالات</h2>
+        <section id="latest-articles">
+            <h2 class="section-title">✨ منبر النقد والفكر</h2>
             
-            <article class="article-card">
-                <img src="/images/article-img-1.jpg" alt="صورة المقال" class="article-img" loading="lazy">
-                <span class="category-tag">أدب معاصر</span>
-                <h3>شعرية المكان: قراءة في قصائد العبثية</h3>
-                <p class="meta">نشر في: 25 سبتمبر 2025</p>
-            </article>
-            
-            <article class="article-card">
-                <img src="/images/article-img-2.jpg" alt="صورة المقال" class="article-img" loading="lazy">
-                <span class="category-tag">تحليل اجتماعي</span>
-                <h3>ظاهرة التضليل الإعلامي: أدوات العصر الجديد</h3>
-                <p class="meta">نشر في: 20 سبتمبر 2025</p>
-            </article>
+            <div class="articles-grid">
+                <article class="article-card card-style">
+                    <a href="welcome-message.html">
+                        <img src="/images/article-img-1.jpg" alt="صورة المقال" class="article-img" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <span class="category-tag">رسائل افتتاحية</span>
+                        <a href="welcome-message.html">
+                            <h3 class="article-title-card">أهلاً بكم: هنا تُصنع الأصوات الجديدة</h3>
+                        </a>
+                        <p class="meta">نشر في: 5 أكتوبر 2025</p>
+                    </div>
+                </article>
+                
+                <article class="article-card card-style">
+                    <a href="article2.html">
+                         <img src="/images/article-img-2.jpg" alt="صورة المقال" class="article-img" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <span class="category-tag">أدب معاصر</span>
+                        <a href="article2.html">
+                            <h3 class="article-title-card">شعرية المكان: قراءة في قصائد العبثية</h3>
+                        </a>
+                        <p class="meta">نشر في: 25 سبتمبر 2025</p>
+                    </div>
+                </article>
 
-            </section>
+                 <article class="article-card card-style">
+                    <a href="article3.html">
+                         <img src="/images/article-img-3.jpg" alt="صورة المقال" class="article-img" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <span class="category-tag">تحليل اجتماعي</span>
+                        <a href="article3.html">
+                           <h3 class="article-title-card">ظاهرة التضليل الإعلامي: أدوات العصر الجديد</h3>
+                        </a>
+                        <p class="meta">نشر في: 20 سبتمبر 2025</p>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <div class="view-all-btn-container">
+                 <a href="#archives" class="btn-secondary">عرض جميع المقالات <i class="fas fa-list-alt"></i></a>
+            </div>
+        </section>
 
     </main>
 
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <h4>مجلة الملتقى الثقافي</h4>
-                <p>رسالتنا هي إيقاظ الوعي ونشر النقد العميق. انضم إلينا في رحلة الفكر.</p>
+                <h4 class="footer-title">مجلة الملتقى الثقافي</h4>
+                <p>صوت النقد الجريء والفكر الذي لا يساوم. معكم، نرسم خارطة جديدة للوعي العربي.</p>
             </div>
             
             <div class="social-links">
-                <h4>تابعنا</h4>
+                <h4 class="footer-title">تابعنا</h4>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+             <div class="footer-contact">
+                <h4 class="footer-title">تواصل معنا</h4>
+                <p><i class="fas fa-envelope"></i> contact@almultaqa.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> بغداد، العراق</p>
             </div>
         </div>
         <div class="copyright">
@@ -94,6 +144,14 @@
         </div>
     </footer>
     
-    <script src="scripts.js"></script> 
+    <script>
+        document.querySelector('.menu-toggle').onclick = function() {
+            const nav = document.getElementById('main-nav');
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('is-open');
+        };
+    </script>
 </body>
-</html>
+    </html>
+    
