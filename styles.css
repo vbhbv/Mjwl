@@ -360,4 +360,31 @@ a:hover {
     .article-title-featured {
         font-size: 2.5em; 
     }
+    /* تنسيق الزر theme-toggle */
+#theme-toggle {
+    /* أساسيات التصميم */
+    padding: 8px 15px; /* مساحة داخلية */
+    border: 2px solid #333; /* حدود بسيطة */
+    border-radius: 20px; /* جعل الحواف مستديرة */
+    background-color: transparent; /* خلفية شفافة */
+    color: #333; /* لون النص في الوضع النهاري */
+    cursor: pointer; /* إظهار مؤشر اليد */
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* لإضافة حركة انسيابية عند التبديل */
 }
+
+/* تنسيق الزر في الوضع الليلي */
+body.dark-mode #theme-toggle {
+    border-color: #f4f4f4;
+    color: #f4f4f4;
+}
+
+/* لمنع ظهور الزر تحت العناصر الأخرى في الشريط العلوي */
+/* قد تحتاج إلى استخدام Flexbox أو Grid على العنصر الأب (#main-nav أو .header-grid) لتنظيمه */
+.header-grid {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر على الجانبين */
+    align-items: center;
+}
+    
